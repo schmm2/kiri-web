@@ -1,0 +1,17 @@
+#welcomebanner-wrap {
+    min-height: 66vh;
+    position: relative;
+}
+
+.welcomeMessage-wrap{
+    text-align: center;
+}
+
+.welcomeMessage{
+    color: #fff;
+    font-size: 68px;
+    line-height: 82px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    width: 100%;
+}

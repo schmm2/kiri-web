@@ -1,8 +1,13 @@
 import React from 'react';
+// Layout
+import Main from './layouts/MainLayout.js';
 
 function App() {
-  const value = 'World';
-  return <div>Hello my {value}</div>;
+  return (
+    <div className="App">
+      <Main></Main>
+    </div>
+  );  
 }
 
 export default App;
