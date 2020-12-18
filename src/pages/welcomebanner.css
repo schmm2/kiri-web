@@ -1,6 +1,8 @@
 #welcomebanner-wrap {
     min-height: 66vh;
     position: relative;
+    background-image: url('../assets/img/luca-bravo-alS7ewQ41M8-unsplash.jpg');
+    background-size: cover;
 }
 
 .welcomeMessage-wrap{
@@ -8,9 +10,18 @@
 }
 
 .welcomeMessage{
-    color: #fff;
+    color: #222222 !important;
     font-size: 68px;
     line-height: 82px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    width: 100%;
+}
+
+.welcomeMessage-small{
+    color: #516679 !important;
+    font-size: 3rem;
+    line-height: 60px;
     letter-spacing: 2.5px;
     text-align: center;
     width: 100%;

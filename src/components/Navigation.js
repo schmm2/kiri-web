@@ -14,10 +14,10 @@ class Navigation extends React.Component {
         return (
             <ul id="navigation" onClick={this.handleClick} mode="horizontal">
                 <li key="app">
-                    <a href="#">Contact</a>
+                    <a href="#contact-wrap">Contact</a>
                 </li>
                 <li key="mail">
-                    <a href="#">Functions</a>
+                    <a href="#functions-wrap">Functions</a>
                 </li>
             </ul>
         );
