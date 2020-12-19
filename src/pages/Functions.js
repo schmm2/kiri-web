@@ -27,7 +27,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }} >
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageCopy} />}
+                  avatar={<Avatar shape={"square"} src={ImageCopy} alt="copy"/>}
                   title="Copy & Paste"
                   description="Policies and Configuration can be duplicated. Within or to another tenant"
                 />
@@ -36,7 +36,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageHistory} />}
+                  avatar={<Avatar shape={"square"} src={ImageHistory} alt="version" />}
                   title="Version control"
                   description="Every change is tracked and can be restore to a previous state."
                 />
@@ -45,7 +45,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageBackup} />}
+                  avatar={<Avatar shape={"square"} src={ImageBackup} alt="backup"/>}
                   title="Backup & Restore"
                   description="All configurations are backed up and can be restored or exported as JSON files."
                 />
@@ -59,7 +59,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageInventory} />}
+                  avatar={<Avatar shape={"square"} src={ImageInventory} alt="inventory" />}
                   title="Inventory"
                   description="Create a inventory of your devices and configurations."
                 />
@@ -68,7 +68,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageDocumentation} />}
+                  avatar={<Avatar shape={"square"} src={ImageDocumentation} alt="documenation"/>}
                   title="Documentation"
                   description="Auto generate a MEM Documentation. Export as Pdf and Markdown."
                 />
@@ -77,7 +77,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageRuleset} />}
+                  avatar={<Avatar shape={"square"} src={ImageRuleset} alt="ruleset" />}
                   title="Ruleset"
                   description="Create ruleset. For example enforce a certain naming concepts for devices and configurations."
                 />
@@ -88,7 +88,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageConnector} />}
+                  avatar={<Avatar shape={"square"} src={ImageConnector} alt="connector" />}
                   title="CMDB-Connectors"
                   description="Connect Kiri to your CMDB. Automatically create device items and link them to the owner. Planned Systems: ServiceNow"
                 />
@@ -97,7 +97,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageDeployment} />}
+                  avatar={<Avatar shape={"square"} src={ImageDeployment} alt="deployment" />}
                   title="Deployment"
                   description="Deployment pipeline to deploy new configurations to all managed tenants."
                 />

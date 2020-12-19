@@ -18,7 +18,7 @@ body{
 
 #footer{
     text-align: center;
-    color: #698183;
+    color: #89a1a3;
 }
 
 .center {
@@ -147,6 +147,7 @@ p{
 
 .ant-card-meta-description {
     font-size: 1.5rem;
+    color: #516679 !important;
 }
 
 .ant-card-meta-title{
