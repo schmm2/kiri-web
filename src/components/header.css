@@ -1,0 +1,11 @@
+#title{
+    display: inline;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

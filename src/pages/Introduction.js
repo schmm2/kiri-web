@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Card, Avatar } from 'antd';
+import { Row, Col } from 'antd';
 
 class Introduction extends React.Component {
 
@@ -8,7 +8,7 @@ class Introduction extends React.Component {
 
       <div className="page" id="introduction-wrap">
         <h2>Vision</h2>
-        <h3>simplify your daily tasks and create a service that scales</h3>
+        <h3>we are here to help</h3>
         <div className="grid">
           <Row gutter={[50, 50]}>
             <Col lg={{ span: 12 }} xs={{ span: 24 }} >

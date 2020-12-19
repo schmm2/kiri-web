@@ -1,7 +1,5 @@
 import React from "react"
 import './welcomebanner.css'
-import { Button } from 'antd';
-// import ImageBanner from '../assets/img/christopher-burns-Kj2SaNHG-hg-unsplash.jpg'
 
 class WelcomeBanner extends React.Component {
 
@@ -9,8 +7,8 @@ class WelcomeBanner extends React.Component {
     return (
       <div id="welcomebanner-wrap" className="background-dark">
         <div className="welcomeMessage-wrap center">
-          <h1 className="welcomeMessage">Kiri</h1>
-          <h1 className="welcomeMessage-small">enhance Microsoft Endpoint Manager</h1>
+          <h1 className="welcomeMessage">Simplify & Automate Microsoft Intune</h1>
+          <p className="welcomeMessage-subtitle">Kiri helps you to keep your repetitive tasks to a minimum and make your admins life easier</p>
         </div>
       </div>
     );

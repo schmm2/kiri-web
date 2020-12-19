@@ -1,5 +1,4 @@
 import React from "react"
-import './functions.css'
 import { Row, Col, Card, Avatar, Divider } from 'antd';
 
 // images
@@ -19,8 +18,8 @@ class Functions extends React.Component {
   render() {
     return (
 
-      <div className="page" id="functions-wrap">
-        <h1>Functions</h1>
+      <div className="page background-bright" id="functions-wrap">
+        <h2>Functions</h2>
         <p className="text-center">This is a list of functions which are planned to develop and integrate into Kiri.</p>
         <div className="grid">
           <Divider>Shipped</Divider>

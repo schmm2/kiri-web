@@ -2,6 +2,10 @@ html{
     font-size: 62.5%
 }
 
+body{
+    overflow-x:hidden;
+}
+
 #header {
     position: absolute;
     width: 100%;
@@ -12,8 +16,9 @@ html{
     padding: 4vh 5vw;
 }
 
-footer, header, main{
-    background-color: transparent !important;
+#footer{
+    text-align: center;
+    color: #698183;
 }
 
 .center {
@@ -46,15 +51,81 @@ footer, header, main{
     color:#FFF;
 }
 
+.background-ultradark{
+    background-color: #151b1e;
+    color:#FFF;
+}
+
+input{
+    border: none;
+    display: block;
+    min-width: 200px;
+    margin-top: 2vh !important;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    margin-top: 3vh !important;
+    font-weight: 600;
+    border: none;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+.background-dark input{
+    border-bottom: 1px solid #597173;
+    background-color: transparent;  
+}
+
+@media only screen and (max-width: 768px){
+    input{
+        width: 100%;
+    }
+}
+
+.background-dark input:focus{
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.background-dark button{
+    background-color: white;
+    color: black;
+}
+
+.background-bright{
+    background-color: #F0F4F7;
+}
+
+
 h1, h2, h3 {
     text-align: center;
     color: #314659;
+}
+
+h1{
+    font-size: 5.5rem;
+}
+
+h2{
+    font-size: 4.5rem;    
 }
 
 h2{
     font-size: 3.5rem;    
 }
 
+#contact-wrap h3{
+    text-align: left;
+}
 
 h3{
     font-size: 2.2rem;    
@@ -62,7 +133,7 @@ h3{
 
 h4{
     font-size: 2rem;  
-    color: #213649 !important;  
+    color: #516679 !important;  
 }
 
 p{
@@ -72,4 +143,12 @@ p{
 
 .grid{
     margin-top: 6vh;
+}
+
+.ant-card-meta-description {
+    font-size: 1.5rem;
+}
+
+.ant-card-meta-title{
+    font-size: 1.8rem !important;
 }

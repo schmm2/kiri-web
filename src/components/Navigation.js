@@ -1,6 +1,5 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 import './navigation.css';
 
 class Navigation extends React.Component {
