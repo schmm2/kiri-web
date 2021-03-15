@@ -7,7 +7,7 @@ class Header extends React.Component {
     render() {
         return (
             <div id="header">
-                <div id="title">Kiri</div>
+                <div id="title">kiri</div>
                 {this.props.children}
             </div>
         );

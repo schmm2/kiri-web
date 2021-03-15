@@ -26,7 +26,7 @@ class Introduction extends React.Component {
             <Col lg={{ span: 12 }} xs={{ span: 24 }}>
               <h4>Vision</h4>
               <p>
-                With Kiri we try to solve some of these issues. Our service will connect to your managed tenants and give you one view to see all devices, all policies and issues that might occure. Deployment of new policies is simplified. If there are changes made to Intune we will track them and give you a changce to restore to a previous version. Backups of your configurations will occur regularly.
+                With kiri we try to solve some of these issues. Our service will connect to your managed tenants and give you one view to see all devices, all policies and issues that might occure. Deployment of new policies is simplified. If there are changes made to Intune we will track them and give you a changce to restore to a previous version. Backups of your configurations will occur regularly.
               </p>
               <p>The following list of functionality might give you a better insight what we are planning to do.</p>
             </Col>

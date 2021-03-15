@@ -8,7 +8,7 @@ class WelcomeBanner extends React.Component {
       <div id="welcomebanner-wrap" className="background-dark">
         <div className="welcomeMessage-wrap center">
           <h1 className="welcomeMessage">Simplify & Automate Microsoft Intune</h1>
-          <p className="welcomeMessage-subtitle">Kiri helps you to keep your repetitive tasks to a minimum and make your admins life easier</p>
+          <p className="welcomeMessage-subtitle">kiri helps you to keep your repetitive tasks to a minimum and make your admins life easier</p>
         </div>
       </div>
     );
