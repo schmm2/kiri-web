@@ -13,7 +13,7 @@ class Contact extends React.Component {
                     <Col lg={{ span: 12 }} xs={{ span: 24 }} >
                         <h3>Get in touch</h3>
                         <p>We would love to hear your feedback. Send us a message and we will get back at you as soon possible.</p>
-                        <p><a href="mailto:support@kiri.codes">support@kiri.codes</a></p>
+                        <p><a href="mailto:hello@kiri.codes">hello@kiri.codes</a></p>
                     </Col>
                     <Col lg={{ span: 12 }} xs={{ span: 24 }}>
                         <h3>Get the news</h3>
