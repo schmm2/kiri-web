@@ -6,7 +6,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="background-ultradark" id="footer">
-                <span>Created at Kiri with &hearts;</span>
+                <span>created with &hearts;</span>
             </div>
         );
     }
