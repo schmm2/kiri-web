@@ -18,11 +18,10 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "npm run sitemap && craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "sitemap": "babel-node ./sitemap-generator.js",
-    "predeploy": "npm run sitemap"
+    "sitemap": "babel-node ./sitemap-generator.js"
   },
   "eslintConfig": {
     "extends": "react-app"
