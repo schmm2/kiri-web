@@ -20,7 +20,7 @@ class Functions extends React.Component {
 
       <div className="page background-bright" id="functions-wrap">
         <h2>Functions</h2>
-        <p className="text-center">This is a list of functions which are planned to develop and integrate into Kiri.</p>
+        <p className="text-center">This is a list of functions which are planned to develop and integrate into kiri.</p>
         <div className="grid">
           <Divider>Shipped</Divider>
           <Row gutter={[16, 16]}>

@@ -24,12 +24,24 @@
     width: 100%;
 }
 
+/* Small Screen */
 @media only screen and (max-width: 768px){
     .welcomeMessage {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .welcomeMessage-subtitle{
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+}
+
+/* Smallest Screens */
+@media only screen and (max-width: 500px){
+    .welcomeMessage {
+        font-size: 2.5rem;
+    }
+
+    .welcomeMessage-subtitle{
+        font-size: 1.8rem;
     }
 }
