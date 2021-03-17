@@ -8,7 +8,7 @@ const Sitemap = require("react-router-sitemap").default;
 function generateSitemap() {
     return (
         new Sitemap(router)
-            .build("https://kiri.codes")
+            .build("https://www.kiri.codes")
             .save("./public/sitemap.xml")
     );
 }
