@@ -12,7 +12,8 @@ class Introduction extends React.Component {
         <div className="grid">
           <Row gutter={[50, 50]}>
             <Col lg={{ span: 12 }} xs={{ span: 24 }} >
-              <h4>The challenges</h4>
+              <h4>Challenges</h4>
+              <div className="titleDivider"></div>
               <p>
                 Microsft Endpoint Manager or to be more accurate Microsoft Intune is an amazing Mobile Device Managemet (MDM). It's not perfect but Microsoft is working hard to improve the system. Every month new features and fixes are comming out. The community is big, helpful and is always supporting each other with advice and scripts. So what's the problem then?
               </p>
@@ -25,6 +26,7 @@ class Introduction extends React.Component {
             </Col>
             <Col lg={{ span: 12 }} xs={{ span: 24 }}>
               <h4>Vision</h4>
+              <div className="titleDivider"></div>
               <p>
                 With kiri we try to solve some of these issues. Our service will connect to your managed tenants and give you one view to see all devices, all policies and issues that might occure. Deployment of new policies is simplified. If there are changes made to Intune we will track them and give you a changce to restore to a previous version. Backups of your configurations will occur regularly.
               </p>
