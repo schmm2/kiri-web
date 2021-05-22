@@ -1,12 +1,18 @@
-# Kiri-Web
+# Kiri
+This is the sourcecode of the website Kiri & documents the kiri project
 
-This is the sourcecode of the website Kiri.
+## Docs
+### Project
+- [Features](docs/features.md)
+### Concepts
+- [Naming Concept](docs/namingconcept.md)
 
-# Design
 
-## Inspiration
+## Design
+
+### Inspiration
 https://open.cruip.com/
 
-## Available scripts
+## Installation & Run
+npm run install
 yarn start
-yarn build
