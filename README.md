@@ -1,9 +1,16 @@
+# Docs
+## Project
+- [Features](docs/features.md)
+## Concepts
+- [Naming Concept](docs/namingconcept.md)
+
+
 # Design
 
 ## Inspiration
 https://open.cruip.com/
 
 
-## Available scripts
+## Installation & Run
+npm run install
 yarn start
-yarn build
