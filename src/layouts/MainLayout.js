@@ -1,10 +1,9 @@
 import React from "react"
-import './MainLayout.css'
 
 // pages
 import WelcomeBanner from '../pages/Welcomebanner'
 import Functions from '../pages/Functions.js'
-import Deploy from '../pages/Deploy.js'
+import Architecture from '../pages/Architecture.js'
 import Introduction from '../pages/Introduction.js'
 import Contact from '../pages/Contact'
 
@@ -25,7 +24,7 @@ class MainLayout extends React.Component {
         <WelcomeBanner></WelcomeBanner>
         <Introduction></Introduction>
         <Functions></Functions>
-        <Deploy></Deploy>
+        <Architecture></Architecture>
         <Contact></Contact>
         <Footer></Footer>
       </div>

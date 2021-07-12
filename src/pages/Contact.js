@@ -1,6 +1,4 @@
 import React from "react"
-import MailchimpSubscribe from "react-mailchimp-subscribe"
-import { Row, Col } from 'antd';
 import './contact.css'
 
 class Contact extends React.Component {

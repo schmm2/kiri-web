@@ -12,10 +12,168 @@ body {
 }  
 
 .titleDivider{
-    height: 3px;
-    width: 20px;
+    height: 4px;
+    width: 30px;
     background-color: @primary-color;
     margin-bottom: 2vh;
+}
+
+
+html{
+    font-size: 62.5%
+}
+
+body{
+    overflow-x:hidden;
+}
+
+#header {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+#footer, #header {
+    padding: 4vh 5vw;
+}
+
+#footer{
+    text-align: center;
+    color: #89a1a3;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.page {
+    min-height: 300px;
+    padding: 8vh 5vw;
+}
+
+
+.background-dark h1, 
+.background-dark h2, 
+.background-dark h3 {
+    color:#FFF;
+}
+
+.background-dark{
+    background-color: #192123;
+    color:#FFF;
+}
+
+.background-ultradark{
+    background-color: #151b1e;
+    color:#FFF;
+}
+
+input{
+    border: none;
+    display: block;
+    min-width: 200px;
+    margin-top: 2vh !important;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    margin-top: 3vh !important;
+    font-weight: 600;
+    border: none;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+.background-dark input{
+    border-bottom: 1px solid #597173;
+    background-color: transparent;  
+}
+
+@media only screen and (max-width: 768px){
+    input{
+        width: 100%;
+    }
+}
+
+.background-dark input:focus{
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.background-dark button{
+    background-color: white;
+    color: black;
+}
+
+.background-bright{
+    background-color: #F0F4F7;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    color: #314659;
+}
+
+h1{
+    font-size: 5.5rem;
+}
+
+h2{
+    font-size: 4.5rem;    
+}
+
+h2{
+    font-size: 3.5rem;    
+}
+
+#contact-wrap h3{
+    text-align: left;
+}
+
+h3{
+    font-size: 2.6rem;    
+}
+
+h4{
+    font-size: 2.3rem;  
+    color: #516679 !important;  
+}
+
+p, li{
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.grid{
+    margin-top: 6vh;
+}
+
+/* ANTD */
+.ant-card-meta-description {
+    font-size: 1.5rem;
+    color: #516679 !important;
+}
+
+.ant-card-meta-title{
+    font-size: 1.8rem !important;
 }
 
 .ant-divider {

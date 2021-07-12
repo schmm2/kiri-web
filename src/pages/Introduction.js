@@ -5,7 +5,6 @@ class Introduction extends React.Component {
 
   render() {
     return (
-
       <div className="page" id="introduction-wrap">
         <h2>Vision</h2>
         <div className="grid">
@@ -29,6 +28,7 @@ class Introduction extends React.Component {
               <p>
                 Kiri tries to solve some of these issues. The service will connect to your managed tenants and give you one view to see all devices, all policies and issues that might occure. Deployment of new policies is simplified. If there are changes made to Intune kiri will track them and give you a changce to restore to a previous version. Backups of your configurations will occur regularly.
               </p>
+              <p>This solution is ment to be a public community project. During my time as System Engineer I had access to many great communities and I felt the need of giving something back.</p>
               <p>The following list of functionality might give you a better insight what kiri is supposed to solve.</p>
             </Col>
           </Row>
