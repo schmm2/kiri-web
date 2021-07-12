@@ -11,10 +11,13 @@ class Navigation extends React.Component {
     render() {
         return (
             <ul id="navigation" onClick={this.handleClick} mode="horizontal">
-                <li key="app">
+                <li key="deploy">
+                    <a href="#deploy-wrap">Deployment</a>
+                </li>
+                <li key="contact">
                     <a href="#contact-wrap">Contact</a>
                 </li>
-                <li key="mail">
+                <li key="function">
                     <a href="#functions-wrap">Functions</a>
                 </li>
             </ul>
