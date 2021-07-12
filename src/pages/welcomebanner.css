@@ -1,6 +1,8 @@
 #welcomebanner-wrap {
     min-height: 66vh;
     position: relative;
+    background-image: url('../assets/img/luca-bravo-alS7ewQ41M8-unsplash_small-min.jpg');
+    background-size: cover;
 }
 
 .welcomeMessage-wrap{
@@ -8,10 +10,38 @@
 }
 
 .welcomeMessage{
-    color: #fff;
-    font-size: 68px;
-    line-height: 82px;
-    letter-spacing: 2.5px;
+    color: #222222 !important;
+    font-size: 5.5rem;
+    font-weight: 800;
     text-align: center;
     width: 100%;
+}
+
+.welcomeMessage-subtitle{
+    color: #516679 !important;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Small Screen */
+@media only screen and (max-width: 768px){
+    .welcomeMessage {
+        font-size: 3.5rem;
+    }
+
+    .welcomeMessage-subtitle{
+        font-size: 2.2rem;
+    }
+}
+
+/* Smallest Screens */
+@media only screen and (max-width: 500px){
+    .welcomeMessage {
+        font-size: 2.5rem;
+    }
+
+    .welcomeMessage-subtitle{
+        font-size: 1.8rem;
+    }
 }

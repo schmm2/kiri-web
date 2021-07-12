@@ -1,6 +1,4 @@
 import React from 'react';
-import 'antd/dist/antd.css';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 import './navigation.css';
 
 class Navigation extends React.Component {
@@ -14,10 +12,10 @@ class Navigation extends React.Component {
         return (
             <ul id="navigation" onClick={this.handleClick} mode="horizontal">
                 <li key="app">
-                    <a href="#">Contact</a>
+                    <a href="#contact-wrap">Contact</a>
                 </li>
                 <li key="mail">
-                    <a href="#">Functions</a>
+                    <a href="#functions-wrap">Functions</a>
                 </li>
             </ul>
         );

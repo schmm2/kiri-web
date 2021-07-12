@@ -5,8 +5,8 @@ class Footer extends React.Component {
 
     render() {
         return (
-            <div className="background-dark" id="footer">
-                <span>Created @Kiri</span>
+            <div className="background-ultradark" id="footer">
+                <span>created with &hearts;</span>
             </div>
         );
     }
