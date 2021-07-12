@@ -18,10 +18,11 @@ class Architecture extends React.Component {
                                 <li>Storage Account: Needed by the Functions App</li>
                                 <li>Cosmos DB: Store Data</li>
                             </ul>
+                            <p>The system while in developing is not restricted in any kind. It is totaly free. But please be aware that the deployed Azure Ressources will generate some cost. At the moment I'm unable to give you some number. I have yet to test the system for a longer period of time.</p>
                         </Col>
                         <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
-                            <h4>Cost</h4>
-                            <p>The system while in developing is not restricted in any kind. It is totaly free. But please be aware that the deployed Azure Ressources will generate some cost. At the moment I'm unable to give you some number. I have yet to test the system for a longer period of time.</p>
+                            <h4>Documentation</h4>
+                            <p>There is none... yet. Feel free to reach out if you have any questiones. The main focus at the moment is to get the functionality up and running.</p>
                         </Col>
                         <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
                             <h4>Deployment</h4>
