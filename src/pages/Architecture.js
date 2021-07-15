@@ -29,7 +29,8 @@ class Architecture extends React.Component {
                             <p>The deployment process is automated in an ARM Template. You can use the button below, login to your tenant and deploy it.</p>
                             <p><b>Important! kiri is in development. I do not guarantee for the stability and functionality of the app at the moment.</b></p>
                             <div>
-                                <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fschmm2%2Fkiri-backend%2Fdev%2Fdeployment%2Fazuredeploy.json" target="_blank" rel="noreferrer"><img alt="deploytoazure" src="https://aka.ms/deploytoazurebutton" /></a>
+                                Here come sthe AZ Deploy Button.... or not... I removed the button temporarily as we had some deployment issue.
+
                             </div>
                         </Col>
                     </Row>
