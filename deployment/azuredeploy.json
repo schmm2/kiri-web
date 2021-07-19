@@ -48,7 +48,7 @@
     "spSecret": {
       "defaultValue": "",
       "type": "secureString"
-    },
+    }
   },
   "variables": {
     "storageAccountName": "[concat('kiri', uniqueString(resourceGroup().id))]",
