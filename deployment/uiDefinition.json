@@ -82,7 +82,7 @@
                 "options": {
                     "icon": "Info",
                     "label": "Deployment Information",
-                    "text": "[concat(basics('siteName'),'')] will be used as the prefix for the azure ressources"
+                    "text": "[concat(basics('siteName'),'will be used as the prefix for the azure ressources.')] "
                 }
             }
         ],
