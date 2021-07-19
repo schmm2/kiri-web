@@ -40,7 +40,15 @@
       "metadata": {
         "description": "Maximum throughput when using Autoscale Throughput Policy for the Database"
       }
-    }
+    },
+    "spId": {
+      "defaultValue": "Service principal id",
+      "type": "string"
+    },
+    "spSecret": {
+      "defaultValue": "",
+      "type": "secureString"
+    },
   },
   "variables": {
     "storageAccountName": "[concat('kiri', uniqueString(resourceGroup().id))]",
@@ -48,7 +56,7 @@
     "functionAppName": "[concat(parameters('siteName'),'-backend')]",
     "frontendASPName": "[concat(parameters('siteName'),'-aspfrontend')]",
     "functionASPName": "[concat(parameters('siteName'),'-aspbackend')]",
-    "keyVaulName": "[concat(parameters('siteName'),'-keyvault')]",
+    "keyVaultName": "[concat(parameters('siteName'),'-keyvault')]",
     "cosmosName": "[concat(parameters('siteName'),'-db')]",
     "functionWorkerRuntime": "node",
     "storageAccountType": "Standard_LRS",
@@ -188,7 +196,7 @@
             },
             {
               "name": "REACT_APP_BACKENDAPIURL",
-              "value": "[concat(reference(resourceId('Microsoft.Web/sites', variables('functionAppName')), '2020-06-01').defaultHostName,'/api')]" 
+              "value": "[concat(reference(resourceId('Microsoft.Web/sites', variables('functionAppName')), '2020-06-01').defaultHostName,'/api')]"
             }
           ]
         }
@@ -216,7 +224,7 @@
     },
     {
       "type": "Microsoft.KeyVault/vaults",
-      "name": "[variables('keyVaulName')]",
+      "name": "[variables('keyVaultName')]",
       "apiVersion": "2019-09-01",
       "location": "[parameters('location')]",
       "properties": {
@@ -247,6 +255,18 @@
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
       ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2019-09-01",
+      "name": "[concat(variables('keyVaultName'), '/', parameters('spId'))]",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]"
+      ],
+      "properties": {
+        "value": "[parameters('spSecret')]"
+      }
     },
     {
       "apiVersion": "2020-04-01",
