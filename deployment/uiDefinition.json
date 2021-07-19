@@ -164,7 +164,6 @@
             "spId": "[steps('ServicePrincipal').spId]",
             "spSecret": "[steps('ServicePrincipal').spSecret]",
             "siteName": "[basics('siteName')]",
-            "admins": "[steps('Administration').admins]",
             "tagsByResource": "[steps('tags').tagsByResource]"
         }
     }
