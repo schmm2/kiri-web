@@ -168,11 +168,8 @@
       "location": "[parameters('location')]",
       "tags": "[ if(contains(parameters('tagsByResource'), 'Microsoft.Web/serverfarms'), parameters('tagsByResource')['Microsoft.Web/serverfarms'], json('{}')) ]",
       "sku": {
-        "name": "S1",
-        "tier": "Standard",
-        "size": "S1",
-        "family": "S",
-        "capacity": 1
+        "name": "B2",
+        "tier": "Basic"
       }
     },
     {
@@ -192,7 +189,7 @@
             },
             {
               "name": "SCM_COMMAND_IDLE_TIMEOUT",
-              "value": 1200
+              "value": "1200"
             },
             {
               "name": "REACT_APP_BACKENDAPIURL",
