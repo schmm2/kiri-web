@@ -193,7 +193,7 @@
             },
             {
               "name": "REACT_APP_BACKENDAPIURL",
-              "value": "[concat(reference(resourceId('Microsoft.Web/sites', variables('functionAppName')), '2020-06-01').defaultHostName,'/api')]"
+              "value": "[concat('https://', reference(resourceId('Microsoft.Web/sites', variables('functionAppName')), '2020-06-01').defaultHostName,'/api')]"
             }
           ]
         }
