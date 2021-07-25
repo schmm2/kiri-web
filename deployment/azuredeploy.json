@@ -162,6 +162,17 @@
       ]
     },
     {
+      "type": "Microsoft.Web/sites/host/functionKeys",
+      "apiVersion": "2020-06-01",
+      "name": "[concat(variables('functionAppName'), '/default/kiriapp')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]"
+      ],
+      "properties": {
+        "name": "kiriapp"
+      }
+    },
+    {
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2020-06-01",
       "name": "[variables('frontendASPName')]",
@@ -197,7 +208,7 @@
             },
             {
               "name": "REACT_APP_FUNCTIONKEY",
-              "value": "[listkeys(concat(variables('functionAppName'), '/host/default/'),'2020-06-01').functionKeys.default]"
+              "value": "[listkeys(concat(resourceId('Microsoft.Web/sites', variables('functionAppName')), '/host/default'),'2020-06-01').functionKeys.kiriapp]"
             }
           ]
         }
