@@ -161,8 +161,8 @@
             }
         ],
         "outputs": {
-            "spId": "[steps('ServicePrincipal').spId]",
-            "spSecret": "[steps('ServicePrincipal').spSecret]",
+            "spId": "[steps('ServicePrincipalBackend').spId]",
+            "spSecret": "[steps('ServicePrincipalBackend').spSecret]",
             "siteName": "[basics('siteName')]",
             "tagsByResource": "[steps('tags').tagsByResource]"
         }
