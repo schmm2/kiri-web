@@ -99,7 +99,7 @@
                             "text": "[concat('A service principal is needed to authenticate to the managed tenants. Please create a service principal based on the documentation and enter the application id and secret. Optionally: Id and secret can be changed on the deployed Key Vault after the deployment. The redirect URI is \"https://',basics('siteName'),'.azurewebsites.net/tenantverification\"')]",
                             "link": {
                                 "label": "Learn more",
-                                "uri": "[concat('https://github.com/schmm2/kiri-web')]"
+                                "uri": "https://github.com/schmm2/kiri-web/docs"
                             }
                         }
                     },
