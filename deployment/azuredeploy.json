@@ -133,6 +133,10 @@
               "value": "[variables('functionWorkerRuntime')]"
             },
             {
+              "name": "KEYVAULT_NAME",
+              "value": "[variables('keyVaultName')]"
+            },
+            {
               "name": "mongodbConnectionString",
               "value": "[listConnectionStrings(resourceId('Microsoft.DocumentDB/databaseAccounts',variables('cosmosName')), '2020-04-01').connectionStrings[0].connectionString]"
             }
