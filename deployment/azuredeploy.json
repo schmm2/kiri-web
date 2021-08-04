@@ -188,6 +188,10 @@
           "AlwaysOn": true,
           "appSettings": [
             {
+              "name": "config:Administrators",
+              "value": "[parameters('admins')]"
+            },
+            {
               "name": "WEBSITE_NODE_DEFAULT_VERSION",
               "value": "~14"
             },
