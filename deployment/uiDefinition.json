@@ -245,8 +245,8 @@
         "outputs": {
             "spId": "[steps('ServicePrincipalBackend').spId]",
             "spSecret": "[steps('ServicePrincipalBackend').spSecret]",
-            "spIdApp": "[steps('ServicePrincipalApp').spId]",
-            "spSecretApp": "[steps('ServicePrincipalApp').spSecret]",
+            "spIdApp": "[steps('ServicePrincipalApp').spIdApp]",
+            "spSecretApp": "[steps('ServicePrincipalApp').spSecretApp]",
             "siteName": "[basics('siteName')]",
             "admins":"[steps('Administration').admins]",
             "tagsByResource": "[steps('tags').tagsByResource]"
