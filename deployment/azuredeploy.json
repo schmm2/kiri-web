@@ -41,11 +41,11 @@
         "description": "Maximum throughput when using Autoscale Throughput Policy for the Database"
       }
     },
-    "spId": {
+    "spIdWorker": {
       "defaultValue": "Service principal id",
       "type": "string"
     },
-    "spSecret": {
+    "spSecretWorker": {
       "defaultValue": "",
       "type": "secureString"
     }
@@ -188,10 +188,6 @@
           "AlwaysOn": true,
           "appSettings": [
             {
-              "name": "config:Administrators",
-              "value": "[parameters('admins')]"
-            },
-            {
               "name": "WEBSITE_NODE_DEFAULT_VERSION",
               "value": "~14"
             },
@@ -268,13 +264,13 @@
     {
       "type": "Microsoft.KeyVault/vaults/secrets",
       "apiVersion": "2019-09-01",
-      "name": "[concat(variables('keyVaultName'), '/', parameters('spId'))]",
+      "name": "[concat(variables('keyVaultName'), '/', parameters('spIdWorker'))]",
       "location": "[parameters('location')]",
       "dependsOn": [
         "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]"
       ],
       "properties": {
-        "value": "[parameters('spSecret')]"
+        "value": "[parameters('spSecretWorker')]"
       }
     },
     {
