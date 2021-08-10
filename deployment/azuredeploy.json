@@ -15,17 +15,6 @@
         "description": "Location for all resources."
       }
     },
-    "locationName": {
-      "type": "string",
-      "defaultValue": "[resourceGroup().location]",
-      "metadata": {
-        "description": "Location for all resources."
-      }
-    },
-    "admins": {
-      "defaultValue": "Administrators of this solutions",
-      "type": "string"
-    },
     "tagsByResource": {
       "type": "object",
       "defaultValue": {
@@ -64,9 +53,7 @@
     "cosmosName": "[concat(parameters('siteName'),'-db')]",
     "functionWorkerRuntime": "node",
     "storageAccountType": "Standard_LRS",
-    "mongoDbName": "kiri",
-    "mongoDbServerVersion": "4.0",
-    "mongoDbThroughput": 400
+    "mongoDbName": "kiri"
   },
   "resources": [
     {
