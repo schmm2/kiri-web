@@ -197,10 +197,10 @@
             }
         ],
         "outputs": {
+            "siteName": "[basics('siteName')]",
             "spIdWorker": "[steps('ServicePrincipalWorker').spIdWorker]",
             "spSecretWorker": "[steps('ServicePrincipalWorker').spSecretWorker]",
             "spIdApp": "[steps('ServicePrincipalApp').spIdApp]",
-            "siteName": "[basics('siteName')]",
             "tagsByResource": "[steps('tags').tagsByResource]"
         }
     }
