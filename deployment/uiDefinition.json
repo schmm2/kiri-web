@@ -201,7 +201,6 @@
             "spSecretWorker": "[steps('ServicePrincipalWorker').spSecretWorker]",
             "spIdApp": "[steps('ServicePrincipalApp').spIdApp]",
             "siteName": "[basics('siteName')]",
-            "admins":"[steps('Administration').admins]",
             "tagsByResource": "[steps('tags').tagsByResource]"
         }
     }
