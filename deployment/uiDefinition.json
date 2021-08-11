@@ -81,7 +81,7 @@
                 "visible": true,
                 "options": {
                     "icon": "Info",
-                    "text": "The siteName will be used as the prefix for the azure ressources like KeyVault, App Service etc."
+                    "text": "v1.0 The siteName will be used as the prefix for the azure ressources like KeyVault, App Service etc."
                 }
             }
         ],
