@@ -81,30 +81,29 @@
                 "visible": true,
                 "options": {
                     "icon": "Info",
-                    "label": "Deployment Information",
-                    "text": "The siteName will be used as the prefix for the azure ressources like KeyVault, App Service etc.')] "
+                    "text": "v1.1 The siteName will be used as the prefix for the azure ressources like KeyVault, App Service etc."
                 }
             }
         ],
         "steps": [
             {
-                "name": "ServicePrincipalBackend",
-                "label": "Service Principal Backend",
+                "name": "ServicePrincipalWorker",
+                "label": "Service Principal Worker",
                 "elements": [
                     {
-                        "name": "textSp",
+                        "name": "textSpWorker",
                         "type": "Microsoft.Common.TextBlock",
                         "visible": true,
                         "options": {
                             "text": "[concat('A service principal is needed to authenticate to the managed tenants. Please create a service principal based on the documentation and enter the application id and secret. Optionally: Id and secret can be changed on the deployed Key Vault after the deployment. The redirect URI is \"https://',basics('siteName'),'.azurewebsites.net/tenantverification\"')]",
                             "link": {
                                 "label": "Learn more",
-                                "uri": "[concat('https://github.com/schmm2/kiri-web')]"
+                                "uri": "https://github.com/schmm2/kiri-web/docs"
                             }
                         }
                     },
                     {
-                        "name": "spId",
+                        "name": "spIdWorker",
                         "type": "Microsoft.Common.TextBox",
                         "label": "Application Id",
                         "toolTip": "The application id of the service principal must be in the format '00000000-0000-0000-0000-000000000000'",
@@ -115,7 +114,7 @@
                         }
                     },
                     {
-                        "name": "spSecret",
+                        "name": "spSecretWorker",
                         "type": "Microsoft.Common.PasswordBox",
                         "label": {
                             "password": "The secret of the service principal",
@@ -136,8 +135,45 @@
                         "visible": true,
                         "options": {
                             "icon": "Info",
-                            "label": " XXX",
-                            "text": "[concat('<b>Create the service principal with powershell in the Cloud Shell</b><br/><br/>Invoke-Command {<br/>$siteName=\"svc-kiribackend\"<br/>$ReplyUri=\"https://',basics('siteName'),'.azurewebsites.net/tenantverification\"<br/>$RequiredGrants = [Microsoft.Open.AzureAD.Model.RequiredResourceAccess]::new(\"00000003-0000-0000-c000-000000000000\",@([Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"1138cb37-bd11-4084-a2b7-9f71582aeddb\", \"Role\"),[Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"78145de6-330d-4800-a6ce-494ff2d33d07\", \"Role\"),[Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"9241abd9-d0e6-425a-bd4f-47ba86e767a4\", \"Role\"), [Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"243333ab-4d21-40cb-a475-36241daa0842\", \"Role\"), [Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"5ac13192-7ace-4fcf-b828-1a26f28068ee\", \"Role\")))<br/><br/>Connect-AzureAD<br/><br/>$App=New-AzureADApplication -DisplayName $siteName -GroupMembershipClaims \"SecurityGroup\" -AvailableToOtherTenants $true -ReplyUrls $ReplyUri -RequiredResourceAccess $RequiredGrants<br/>$AppSecret = New-AzureADApplicationPasswordCredential -ObjectId $App.ObjectId -EndDate ([System.DateTime]::Now.AddYears(2).ToString(\"o\"))<br/>write-host \"--------------------------------------------------------------------------\"<br/>write-host \"Application Id:        $($app.AppId)\"<br/>write-host \"Secret:                $($AppSecret.Value)\"<br/>write-host \"--------------------------------------------------------------------------\"}','')]"
+                            "text": "[concat('<b>Create the service principal with powershell in the Cloud Shell</b><br/><br/>Invoke-Command {<br/>$siteName=\"svc-kiriworker\"<br/>$ReplyUri=\"https://',basics('siteName'),'.azurewebsites.net/tenantverification\"<br/>$RequiredGrants = [Microsoft.Open.AzureAD.Model.RequiredResourceAccess]::new(\"00000003-0000-0000-c000-000000000000\",@([Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"1138cb37-bd11-4084-a2b7-9f71582aeddb\", \"Role\"),[Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"78145de6-330d-4800-a6ce-494ff2d33d07\", \"Role\"),[Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"9241abd9-d0e6-425a-bd4f-47ba86e767a4\", \"Role\"), [Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"243333ab-4d21-40cb-a475-36241daa0842\", \"Role\"), [Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"5ac13192-7ace-4fcf-b828-1a26f28068ee\", \"Role\")))<br/><br/>Connect-AzureAD<br/><br/>$App=New-AzureADApplication -DisplayName $siteName -GroupMembershipClaims \"SecurityGroup\" -AvailableToOtherTenants $true -ReplyUrls $ReplyUri -RequiredResourceAccess $RequiredGrants<br/>$AppSecret = New-AzureADApplicationPasswordCredential -ObjectId $App.ObjectId -EndDate ([System.DateTime]::Now.AddYears(2).ToString(\"o\"))<br/>write-host \"--------------------------------------------------------------------------\"<br/>write-host \"Application Id:        $($app.AppId)\"<br/>write-host \"Secret:                $($AppSecret.Value)\"<br/>write-host \"--------------------------------------------------------------------------\"}','')]"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ServicePrincipalApp",
+                "label": "Service Principal App",
+                "elements": [
+                    {
+                        "name": "textSp",
+                        "type": "Microsoft.Common.TextBlock",
+                        "visible": true,
+                        "options": {
+                            "text": "[concat('A service principal is needed to authenticate to the web app. Please create a service principal based on the documentation and enter the application id and secret. Optionally: Id and secret can be changed on the deployed Key Vault after the deployment. The redirect URI is \"https://',basics('siteName'),'.azurewebsites.net/signin-oidc\"')]",
+                            "link": {
+                                "label": "Learn more",
+                                "uri": "https://github.com/schmm2/kiri-web/docs"
+                            }
+                        }
+                    },
+                    {
+                        "name": "spIdApp",
+                        "type": "Microsoft.Common.TextBox",
+                        "label": "Application Id",
+                        "toolTip": "The application id of the service principal must be in the format '00000000-0000-0000-0000-000000000000'",
+                        "constraints": {
+                            "required": true,
+                            "regex": "^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$",
+                            "validationMessage": "The application id of the service principal must be in the format '00000000-0000-0000-0000-000000000000'"
+                        }
+                    },
+                    {
+                        "name": "infoBoxSp",
+                        "type": "Microsoft.Common.InfoBox",
+                        "visible": true,
+                        "options": {
+                            "icon": "Info",
+                            "text": "[concat('<b>Create the service principal with powershell in the Cloud Shell</b><br/><br/>Invoke-Command {<br/>$AppName=\"svc-kiriapp\"<br/>$SpaBody = \"{spa:{redirectUris:[&apos;https://',basics('siteName'),'.azurewebsites.net&apos;]}}\"<br/>$RequiredGrants = [Microsoft.Open.AzureAD.Model.RequiredResourceAccess]::new(\"00000003-0000-0000-c000-000000000000\",@([Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"e1fe6dd8-ba31-4d61-89e7-88639da4683d\",\"Scope\"),[Microsoft.Open.AzureAD.Model.ResourceAccess]::new(\"b340eb25-3456-403f-be2f-af7a0d370277\",\"Scope\")))<br/><br/>Connect-AzureAD<br/><br/>$App=New-AzureADApplication -DisplayName $AppName -AvailableToOtherTenants $true -GroupMembershipClaims \"SecurityGroup\" -RequiredResourceAccess $RequiredGrants<br/>$AppRestUrl = \"https://graph.microsoft.com/v1.0/applications/\" + $App.ObjectId</br>az rest --method PATCH --uri $AppRestUrl --headers \"Content-Type=application/json\" --body $SpaBody</br>write-host \"--------------------------------------------------------------------------\"<br/>write-host \"Application Id:        $($app.AppId)\"<br/>write-host \"--------------------------------------------------------------------------\"}','')]"
                         }
                     }
                 ]
@@ -161,9 +197,10 @@
             }
         ],
         "outputs": {
-            "spId": "[steps('ServicePrincipal').spId]",
-            "spSecret": "[steps('ServicePrincipal').spSecret]",
             "siteName": "[basics('siteName')]",
+            "spIdWorker": "[steps('ServicePrincipalWorker').spIdWorker]",
+            "spSecretWorker": "[steps('ServicePrincipalWorker').spSecretWorker]",
+            "spIdApp": "[steps('ServicePrincipalApp').spIdApp]",
             "tagsByResource": "[steps('tags').tagsByResource]"
         }
     }

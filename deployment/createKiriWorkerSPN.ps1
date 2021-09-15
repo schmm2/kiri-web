@@ -1,6 +1,6 @@
 Invoke-Command { 
-    $SiteName = "svc-kiribackend"
-    $ReplyUri = "https://',basics('siteName'),'.azurewebsites.net/tenantverification"
+    $SiteName = "svc-kiriworker"
+    $ReplyUri = "https://kiriworker.azurewebsites.net/tenantverification"
     $RequiredGrants = [Microsoft.Open.AzureAD.Model.RequiredResourceAccess]::new("00000003-0000-0000-c000-000000000000", 
         @(
             [Microsoft.Open.AzureAD.Model.ResourceAccess]::new("1138cb37-bd11-4084-a2b7-9f71582aeddb", "Role"), 
