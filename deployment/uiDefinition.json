@@ -79,7 +79,7 @@
                 "visible": true,
                 "options": {
                     "icon": "Info",
-                    "text": "[concat('The siteName ',basics('siteName'),' will be used as the prefix for the azure ressources like KeyVault, App Service etc.'])"
+                    "text": "[concat('The siteName ',basics('siteName'),' will be used as the prefix for the azure ressources like KeyVault, App Service etc.')]"
                 }
             }
         ],
