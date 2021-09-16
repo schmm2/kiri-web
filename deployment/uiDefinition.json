@@ -13,8 +13,7 @@
             "Microsoft.Web/sites",
             "Microsoft.DocumentDb/databaseAccounts"
         ],
-        "basics": [
-            {
+        "basics": [{
                 "name": "nameApiWeb",
                 "type": "Microsoft.Solutions.ArmApiControl",
                 "request": {
@@ -59,8 +58,7 @@
                     "required": true,
                     "regex": "^[a-z0-9]{1}[a-z0-9-]{3,21}$",
                     "validationMessage": "The name should include 4-22 letters, digits or '-'. The '-' shouldn't be the first symbol.",
-                    "validations": [
-                        {
+                    "validations": [{
                             "isValid": "[or(less(length(basics('siteName')),4),not(equals(basics('nameApiWeb').nameAvailable, false)))]",
                             "message": "Please use another name. The name is not available for a web site"
                         },
@@ -81,16 +79,14 @@
                 "visible": true,
                 "options": {
                     "icon": "Info",
-                    "text": "v1.1 The siteName will be used as the prefix for the azure ressources like KeyVault, App Service etc."
+                    "text": "[concat('The siteName ',basics('siteName'),' will be used as the prefix for the azure ressources like KeyVault, App Service etc.')]"
                 }
             }
         ],
-        "steps": [
-            {
+        "steps": [{
                 "name": "ServicePrincipalWorker",
                 "label": "Service Principal Worker",
-                "elements": [
-                    {
+                "elements": [{
                         "name": "textSpWorker",
                         "type": "Microsoft.Common.TextBlock",
                         "visible": true,
@@ -143,8 +139,7 @@
             {
                 "name": "ServicePrincipalApp",
                 "label": "Service Principal App",
-                "elements": [
-                    {
+                "elements": [{
                         "name": "textSp",
                         "type": "Microsoft.Common.TextBlock",
                         "visible": true,
@@ -181,19 +176,17 @@
             {
                 "name": "tags",
                 "label": "Tags",
-                "elements": [
-                    {
-                        "name": "tagsByResource",
-                        "type": "Microsoft.Common.TagsByResource",
-                        "toolTip": "Add tags to the resources for governance reason",
-                        "resources": [
-                            "Microsoft.KeyVault/vaults",
-                            "Microsoft.Web/serverfarms",
-                            "Microsoft.Storage/storageAccounts",
-                            "Microsoft.Web/sites"
-                        ]
-                    }
-                ]
+                "elements": [{
+                    "name": "tagsByResource",
+                    "type": "Microsoft.Common.TagsByResource",
+                    "toolTip": "Add tags to the resources for governance reason",
+                    "resources": [
+                        "Microsoft.KeyVault/vaults",
+                        "Microsoft.Web/serverfarms",
+                        "Microsoft.Storage/storageAccounts",
+                        "Microsoft.Web/sites"
+                    ]
+                }]
             }
         ],
         "outputs": {
