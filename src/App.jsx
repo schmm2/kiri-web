@@ -1,6 +1,6 @@
 import React from 'react';
 // Layout
-import Main from './layouts/MainLayout.js';
+import Main from './layouts/MainLayout';
 
 import './App.less'
 
