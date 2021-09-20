@@ -4,7 +4,7 @@ import { Row, Col } from 'antd';
 class Architecture extends React.Component {
     render() {
         return (
-            <div className="page" id="deploy-wrap">
+            <div className="page" id="architecture-wrap">
                 <h2>Architecture</h2>
                 <div className="grid">
                     <Row gutter={[16, 16]}>
@@ -27,10 +27,8 @@ class Architecture extends React.Component {
                         <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
                             <h4>Deployment</h4>
                             <p>The deployment process is automated in an ARM Template. You can use the button below, login to your tenant and deploy it.</p>
-                            <p><b>Important! kiri is in development. I do not guarantee for the stability and functionality of the app at the moment.</b></p>
-                            <div>
-                                Here comes the AZ Deploy Button...or not...I removed the button temporarily as we had some deployment issue.
-                            </div>
+                            <p><b>Important! kiri is in development. I do not guarantee for the stability and functionality of the app. Try it on your own risk.</b></p>
+                            <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fschmm2%2Fkiri-deploy%2Fmaster%2Fdeployment%2Fazuredeploy.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2Fschmm2%2Fkiri-deploy%2Fmaster%2Fdeployment%2FuiDefinition.json" target="_blank"><img src="https://aka.ms/deploytoazurebutton"/></a>
                         </Col>
                     </Row>
                 </div>

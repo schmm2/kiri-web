@@ -11,8 +11,8 @@ class Navigation extends React.Component {
     render() {
         return (
             <ul id="navigation" onClick={this.handleClick} mode="horizontal">
-                <li key="deploy">
-                    <a href="#deploy-wrap">Deployment</a>
+                <li key="architecture">
+                    <a href="#architecture-wrap">Architecture</a>
                 </li>
                 <li key="contact">
                     <a href="#contact-wrap">Contact</a>
