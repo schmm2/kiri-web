@@ -11,4 +11,4 @@ https://open.cruip.com/
 ## Installation & Run
 
 npm run install
-yarn start
+npm run start
