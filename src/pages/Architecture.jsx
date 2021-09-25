@@ -22,11 +22,11 @@ class Architecture extends React.Component {
                         </Col>
                         <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
                             <h4>Documentation</h4>
-                            <p>The documentation part is still under construction and will be improved over the next months, You can find all docs on <a target="_blank" href="https://docs.kiri.codes">docs.kiri.codes</a></p>
+                            <p>The documentation part is still under construction and will be improved over the next months, You can find all docs on <a target="_blank" rel="noreferrer" href="https://docs.kiri.codes">docs.kiri.codes</a></p>
                         </Col>
                         <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
                             <h4>Deployment</h4>
-                            <p>The deployment process is automated in an ARM Template. You can use the deploy button, login to your tenant and deploy it. Follow the instructions <a target="_blank" href="https://docs.kiri.codes/#/installation">here </a></p>
+                            <p>The deployment process is automated in an ARM Template. You can use the deploy button, login to your tenant and deploy it. Follow the instructions <a target="_blank" rel="noreferrer" href="https://docs.kiri.codes/#/installation">here </a></p>
                             <p><b>Important! kiri is in development. I do not guarantee for the stability and functionality of the app. Try it on your own risk.</b></p>
                         </Col>
                     </Row>
