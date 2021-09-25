@@ -1,4 +1,4 @@
-# Kiri
+# kiri-web
 
 This is the sourcecode of the website kiri https://kiri.codes
 
