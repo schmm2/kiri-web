@@ -27,7 +27,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }} >
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageCopy} alt="copy"/>}
+                  avatar={<Avatar shape={"square"} src={ImageCopy} alt="copy" />}
                   title="Copy & Paste"
                   description="Policies and Configuration can be duplicated. Within or to another tenant"
                 />
@@ -45,9 +45,18 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageBackup} alt="backup"/>}
+                  avatar={<Avatar shape={"square"} src={ImageBackup} alt="backup" />}
                   title="Backup & Restore"
                   description="All configurations are backed up and can be restored or exported as JSON files."
+                />
+              </Card>
+            </Col>
+            <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
+              <Card hoverable={true}>
+                <Meta
+                  avatar={<Avatar shape={"square"} src={ImageInventory} alt="inventory" />}
+                  title="Inventory"
+                  description="Create a inventory of your devices and configurations."
                 />
               </Card>
             </Col>
@@ -59,16 +68,7 @@ class Functions extends React.Component {
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
-                  avatar={<Avatar shape={"square"} src={ImageInventory} alt="inventory" />}
-                  title="Inventory"
-                  description="Create a inventory of your devices and configurations."
-                />
-              </Card>
-            </Col>
-            <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
-              <Card hoverable={true}>
-                <Meta
-                  avatar={<Avatar shape={"square"} src={ImageDocumentation} alt="documenation"/>}
+                  avatar={<Avatar shape={"square"} src={ImageDocumentation} alt="documenation" />}
                   title="Documentation"
                   description="Auto generate a MEM Documentation. Export as Pdf and Markdown."
                 />
@@ -83,8 +83,6 @@ class Functions extends React.Component {
                 />
               </Card>
             </Col>
-          </Row>
-          <Row gutter={[16, 16]}>
             <Col lg={{ span: 8 }} xs={{ span: 24, offset: 0 }}>
               <Card hoverable={true}>
                 <Meta
